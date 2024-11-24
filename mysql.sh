@@ -30,6 +30,7 @@ VALIDATE(){
     fi
 }
 
+echo "Script started at : $(date)" | tee -a $File_Name
 
  CHECK_ROOT
 
