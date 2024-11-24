@@ -46,11 +46,11 @@ VALIDATE $? "Mysql-Server Starting"
 
 mysql -h mysql.devopspractice.in -u root -pExpenseApp@1 -e 'show databases;' &>>$File_Name
 
-if [$?-ne 0 ]
+if [ $?-ne 0 ]
 then 
-echo "MySQL root $R password is not setup $N,$G setting now $N" &>>$File_Name
+echo -e "MySQL root $R password is not setup $N,$G setting now $N" &>>$File_Name
 mysql_secure_installation --set-root-pass ExpenseApp@1 &>>$File_Name
 VALIDATE $? "Mysql-Server password setting"
 else
-echo "Mysql root password is$G already set $N"
+echo -e "Mysql root password is$G already set $N"
 fi
