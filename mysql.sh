@@ -53,3 +53,4 @@ mysql_secure_installation --set-root-pass ExpenseApp@1 &>>$File_Name
 VALIDATE $? "Mysql-Server password setting"
 else
 echo "Mysql root password is$G already set $N"
+fi
